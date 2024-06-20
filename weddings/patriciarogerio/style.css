@@ -1,0 +1,284 @@
+@font-face {
+	src: url("./KozMinPro-ExtraLight.otf");
+	font-family: Kozuka;
+}
+
+@keyframes flowers-top {
+	0%   { top: -30%; right: -50% }
+	80%  { top: -6.5%; right: -14% }
+	100% { top: -7%; right: -15% }
+}
+
+@keyframes flowers-top-down {
+	from { top: -7%; right: -15% }
+	to   { top: -6%; right: -14% }
+}
+
+@keyframes flowers-bottom1 {
+	0%   { bottom: -30%; left: -50% }
+	80%  { bottom: -6.5%; left: -30% }
+	100% { bottom: -7%; left: -31% }
+}
+
+@keyframes flowers-bottom2 {
+	0%   { bottom: -30%; right: -60% }
+	80%  { bottom: -11.5%; right: -37.5% }
+	100% { bottom: -12%; right: -38% }
+}
+
+@keyframes text-patricia {
+	0%   { top: -5%; left: -75% }
+	80%  { top: 15.5%; left: 9.5% }
+	100% { top: 15%; left: 9% }
+}
+
+@keyframes text-rogerio {
+	0%   { top: 35%; left: 100% }
+	80%  { top: 26%; left: 17.5% }
+	100% { top: 26%; left: 18% }
+}
+
+@keyframes fade-in {
+	from { opacity: 0 }
+	to   { opacity: 1 }
+}
+
+@keyframes button {
+	0%   { top: 101%; }
+	80%  { top: 71%; }
+	100% { top: 72%; }
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: black;
+	font-family: Kozuka, serif;
+}
+
+p {
+	color: #6F6357;
+	text-align: center;
+	line-height: 1.15;
+}
+
+#big-wrapper {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+}
+
+#main-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+#background {
+	max-width: 100vw;
+	max-height: 100vh;
+	display: block;
+}
+
+.image {
+	position: absolute;
+}
+
+#watermark {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+}
+
+#watermark.animate {
+	animation: fade-in 2s ease-out;
+	animation-fill-mode: forwards;
+}
+
+#petals-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#flowers-top {
+	width: 110%;
+	top: -30%;
+	right: -50%;
+	transform-origin: right 25%;
+}
+
+#flowers-top.animate {
+	animation: flowers-top 2s ease-in-out 0.5s;
+	animation-fill-mode: forwards;
+}
+
+#flowers-bottom2 {
+	width: 100%;
+	right: -60%;
+	bottom: -30%;
+	transform-origin: right 50%;
+}
+
+#flowers-bottom2.animate {
+	animation: flowers-bottom2 2s ease-in-out 1.25s;
+	animation-fill-mode: forwards;
+}
+
+#flowers-bottom1 {
+	width: 100%;
+	bottom: -30%;
+	left: -50%;
+	transform-origin: left 50%;
+}
+
+#flowers-bottom1.animate {
+	animation: flowers-bottom1 2s ease-in-out 0.75s;
+	animation-fill-mode: forwards;
+}
+
+#text-patricia {
+	width: 70%;
+	top: 5%;
+	left: -75%;
+}
+
+#text-patricia.animate {
+	animation: text-patricia 2s ease-in-out 1.5s;
+	animation-fill-mode: forwards;
+}
+
+#text-e {
+	width: 5%;
+	top: 26%;
+	left: 49%;
+	opacity: 0;
+}
+
+#text-e.animate {
+	animation: fade-in 1s ease-out 3s;
+	animation-fill-mode: forwards;
+}
+
+#text-rogerio {
+	width: 70%;
+	top: 35%;
+	left: 100%;
+}
+
+#text-rogerio.animate {
+	animation: text-rogerio 2s ease-in-out 1.75s;
+	animation-fill-mode: forwards;
+}
+
+#main-wrapper>p {
+	position: absolute;
+	width: 100%;
+}
+
+#text-invite {
+	top: 43%;
+	line-height: 1.15;
+	opacity: 0;
+}
+
+#text-invite.animate {
+	animation: fade-in 2s ease-out 4s;
+	animation-fill-mode: forwards;
+}
+
+#text-date {
+	top: 52.5%;
+	opacity: 0;
+}
+
+#text-date.animate {
+	animation: fade-in 2s ease-out 5s;
+	animation-fill-mode: forwards;
+}
+
+#text-location {
+	top: 60%;
+	opacity: 0;
+}
+
+#text-location.animate {
+	animation: fade-in 2s ease-out 6s;
+	animation-fill-mode: forwards;
+}
+
+#text-address {
+	top: 64%;
+	opacity: 0;
+}
+
+#text-address.animate {
+	animation: fade-in 2s ease-out 6.5s;
+	animation-fill-mode: forwards;
+}
+
+.button-container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 22%;
+}
+
+#button-container1 {
+	left: 10%;
+}
+
+#button-container1.animate {
+	animation: button 0.75s ease-in-out 7s;
+	animation-fill-mode: forwards;
+}
+
+#button-container2 {
+	left: 39%;
+}
+
+#button-container2.animate {
+	animation: button 0.75s ease-in-out 7.25s;
+	animation-fill-mode: forwards;
+}
+
+#button-container3 {
+	right: 10%;
+}
+
+#button-container3.animate {
+	animation: button 0.75s ease-in-out 7.5s;
+	animation-fill-mode: forwards;
+}
+
+#text-button-list, #text-button-location, #text-button-confirmation {
+	opacity: 0;
+}
+
+#text-button-list.animate {
+	animation: fade-in 0.75s ease-out 7.25s;
+	animation-fill-mode: forwards;
+}
+
+#text-button-location.animate {
+	animation: fade-in 0.75s ease-out 7.5s;
+	animation-fill-mode: forwards;
+}
+
+#text-button-confirmation.animate {
+	animation: fade-in 0.75s ease-out 7.75s;
+	animation-fill-mode: forwards;
+}
+
+.button {
+	display: block;
+	width: 100%;
+}
+
