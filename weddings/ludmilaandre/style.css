@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#main-wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #1f0c00;
+}
+
+video {
+	height: 100%;
+}
