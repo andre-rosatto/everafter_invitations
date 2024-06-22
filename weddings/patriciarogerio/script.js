@@ -32,7 +32,7 @@ function setTextSizes() {
 	textInvite.style.fontSize = `${textInvite.getBoundingClientRect().width / 3}%`;
 	textDate.style.fontSize = `${textDate.getBoundingClientRect().width / 2.2}%`;
 	textLocation.style.fontSize = `${textLocation.getBoundingClientRect().width / 3}%`;
-	textAddress.style.fontSize = `${textAddress.getBoundingClientRect().width / 3.5}%`;
+	textAddress.style.fontSize = `${textAddress.getBoundingClientRect().width / 4.5}%`;
 	textButtonList.style.fontSize = `${textButtonList.getBoundingClientRect().width * 1.1}%`;
 	textButtonLocation.style.fontSize = `${textButtonLocation.getBoundingClientRect().width * 1.1}%`;
 	textButtonConfirmation.style.fontSize = `${textButtonConfirmation.getBoundingClientRect().width * 1.1}%`;
